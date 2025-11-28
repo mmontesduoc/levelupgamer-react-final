@@ -1,0 +1,293 @@
+/* Navbar Styles */
+.navbar {
+  background-color: var(--primary-color) !important;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.navbar-nav .nav-link {
+  font-size: 15px !important; /* tamaño más pequeño */
+  font-weight: 500;
+}
+.navbar-nav .nav-link:hover {
+  color: #c3dcf7 !important;
+  
+}
+/* Estilo reducido SOLO para Iniciar Sesión */
+.navbar .d-flex .nav-link {
+  font-size: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+.navbar .d-flex .nav-link:hover {
+  color: #c3dcf7 !important;
+  transform: translateY(-10px);
+  transition: transform 0.5s;
+}
+
+/* Icono reducido */
+.navbar .d-flex .nav-link i {
+  font-size: 14px !important;
+}
+
+
+.navbar-brand,
+.nav-link {
+  color: var(--text-light) !important;
+}
+
+/* Centrar menú */
+#navbarSupportedContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-nav {
+  margin: 0 auto !important; /* Centra los ítems */
+}
+
+
+/* Separar los títulos del menu */
+.navbar-nav .nav-item {
+  margin: 0 15px;
+}
+
+/* (removed category color pill styles) */
+
+.navbar-nav .nav-item:hover {
+  transform: translateY(-10px);
+  transition: transform 0.5s;
+}
+
+/* Hacer que el navbar ocupe todo el ancho */
+.container-fluid {
+  padding: 0;
+}
+
+/* Ajustes para el botón del menú en móviles */
+.navbar-toggler {
+  position: absolute;
+  right: 15px;
+}
+
+/* Estilos para el icono del carrito y login */
+.cart-section {
+  display: flex;
+  align-items: center;
+  order: 1;                   /* Mueve el grupo al inicio (izquierda) */
+}
+
+.cart-icon,
+.cart-login {
+  position: relative;
+  margin-right: 15px;         /* Espacio entre iconos */
+}
+
+.cart-login a,
+.cart-icon a {
+  color: var(--text-light);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 6px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.cart-login a:hover,
+.cart-icon a:hover {
+  color: #6eb4ff;
+}
+
+.cart-count {
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  background: red;
+  color: var(--text-light);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.inicio-sesion {
+  font-size: 14px;
+  margin-left: 4px;
+  margin-right: 10px;
+}
+.cart-login {
+  margin-right: 20px; /* ajusta el valor según el espacio deseado */
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+}
+.cart-login a:hover .inicio-sesion,
+.cart-login a:hover i {
+  color: #6eb4ff; /* color al pasar el mouse */
+  transition: color 0.3s ease;
+}
+
+.logo-brand {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -24px; /* empuja el logo más a la izquierda */
+}
+
+/* Reduce horizontal padding inside the navbar container to gain extra space */
+.navbar .container {
+  padding-left: 0px;
+  padding-right: 8px;
+}
+
+/* Evitar que el logo se corte en pantallas pequeñas: restablecer margin en mobile */
+@media (max-width: 767px) {
+  .logo-brand {
+    margin-left: 6px;
+    height: 50px;
+  }
+}
+
+/* New cart alignment rules */
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  color: var(--text-light);
+}
+
+.cart-link .cart-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cart-link .cart-count {
+  top: -6px;
+  right: -8px;
+  font-size: 11px;
+  padding: 3px 6px;
+}
+
+/* Prevent right-side hover translate (keep icons stable) */
+.navbar .d-flex > *:hover {
+  transform: none !important;
+}
+
+/* Ajustes para mostrar el nombre de usuario y logout en el extremo derecho */
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.nav-username {
+  font-weight: 600;
+  font-size: 14px;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-logout {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-logout:hover {
+  color: #6eb4ff;
+  text-decoration: underline;
+}
+
+/* Evitar que los enlaces del extremo derecho salten al hacer hover (no aplicar el translate grande) */
+.navbar .d-flex .nav-link:hover,
+.nav-user:hover {
+  transform: none !important;
+}
+
+@media (max-width: 767px) {
+  .nav-username {
+    max-width: 90px;
+    font-size: 13px;
+  }
+  .logo-brand {
+    height: 50px;
+  }
+}
+
+/* Dropdown styles for user menu */
+.nav-user-wrapper {
+  position: relative;
+}
+
+.nav-user {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav-user .fa-caret-down { transition: transform 0.2s ease; }
+.nav-user .fa-caret-down.open { transform: rotate(180deg); }
+
+.nav-user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 160px;
+  background: var(--primary-color);
+  color: var(--text-light);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  padding: 6px 0;
+  z-index: 2000;
+}
+
+.nav-user-dropdown .dropdown-item {
+  padding: 8px 12px;
+  font-size: 13px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+}
+
+.nav-user-dropdown .dropdown-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.nav-user-dropdown .user-name {
+  font-weight: 600;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.nav-user-dropdown .logout-btn {
+  width: 100%;
+  text-align: left;
+  padding-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .nav-user-dropdown { right: -8px; }
+}

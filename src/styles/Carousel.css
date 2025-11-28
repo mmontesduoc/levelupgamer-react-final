@@ -1,0 +1,63 @@
+/* Carousel Styles */
+.carousel-item {
+  height: 500px;
+    overflow: hidden;
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+        height: 100%;
+	}
+
+	.carousel-caption {
+	  background-color: rgba(0, 0, 0, 0.5);
+	    border-radius: 10px;
+	    }
+
+	    .carousel {
+	      animation: slideUp 1.0s ease-out forwards;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
